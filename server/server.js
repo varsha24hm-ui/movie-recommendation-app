@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("DIRECT SERVER WORKING");
+  res.send("Movie Backend Running");
 });
 
 app.get("/movies", (req, res) => {
@@ -46,6 +46,8 @@ app.get("/movies", (req, res) => {
 
 });
 
-app.listen(5000, () => {
-  console.log("Server running on 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
 });

@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
 
     axios
-      .get("http://localhost:5000/movies")
+      .get("https://movie-backend-6lhc.onrender.com/movies")
       .then((res) => {
 
         setMovies(res.data);
@@ -62,7 +62,6 @@ function App() {
               borderRadius: "20px",
               padding: "20px",
               boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
-              transition: "0.3s",
               border: "1px solid #334155"
             }}
           >
